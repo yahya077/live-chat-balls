@@ -33,6 +33,11 @@ server.on('listening', onListening);
  * Normalize a port into a number, string, or false.
  */
 
+/* socket.io */
+const socketApi = require('../src/socketApi');
+const io = socketApi.io;
+io.attach(server);
+ 
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
